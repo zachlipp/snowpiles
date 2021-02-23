@@ -1,7 +1,7 @@
 #!/bin/bash
 set -uo pipefail
 
-mkdir maps
+mkdir -p maps
 
 BASE_URL="http://www.nohrsc.noaa.gov/snowfall/data/"
 PAST=$(date -I -d "${TODAY} - 4 months")
