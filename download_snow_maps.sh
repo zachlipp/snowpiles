@@ -4,7 +4,8 @@ set -uo pipefail
 mkdir -p maps
 
 BASE_URL="http://www.nohrsc.noaa.gov/snowfall/data/"
-PAST=$(date -I -d "${TODAY} - 4 months")
+# `ls` outputs files alphabetically
+PAST=$(ls maps | tail -n 1)
 # Snowfall maps start on 09/30
 SNOWFALL_START="$(date +%Y -d $PAST)093012"
 
