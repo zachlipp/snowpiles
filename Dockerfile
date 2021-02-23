@@ -5,12 +5,8 @@ RUN apt-get update && \
       imagemagick \
       curl
 
-COPY download_snow_maps.sh /home
+ENV TODAY=2021-02-23
 
 WORKDIR home
-
-RUN ./download_snow_maps.sh
-
-COPY snowpiles.sh .
 
 ENTRYPOINT ./snowpiles.sh
